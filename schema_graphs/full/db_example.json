@@ -1,0 +1,1401 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "table",
+      "name": "account",
+      "id": "account"
+    },
+    {
+      "type": "column",
+      "table": "account",
+      "name": "account_id",
+      "col_type": "INTEGER",
+      "is_pk": true,
+      "examples": [
+        "1",
+        "2"
+      ],
+      "original_column_name": "account_id",
+      "column_name": "account id",
+      "column_description": "the id of the account",
+      "data_format": "integer",
+      "value_description": null,
+      "id": "account.account_id"
+    },
+    {
+      "type": "column",
+      "table": "account",
+      "name": "district_id",
+      "col_type": "INTEGER",
+      "is_pk": false,
+      "examples": [
+        "1",
+        "70"
+      ],
+      "original_column_name": "district_id",
+      "column_name": "location of branch",
+      "column_description": "location of branch",
+      "data_format": "integer ",
+      "value_description": null,
+      "id": "account.district_id"
+    },
+    {
+      "type": "column",
+      "table": "account",
+      "name": "frequency",
+      "col_type": "TEXT",
+      "is_pk": false,
+      "examples": [
+        "POPLATEK MESICNE",
+        "POPLATEK TYDNE"
+      ],
+      "original_column_name": "frequency",
+      "column_name": "frequency",
+      "column_description": "frequency of the acount",
+      "data_format": "text",
+      "value_description": null,
+      "id": "account.frequency"
+    },
+    {
+      "type": "column",
+      "table": "account",
+      "name": "date",
+      "col_type": "DATE",
+      "is_pk": false,
+      "examples": [
+        "1993-02-08",
+        "1993-10-08"
+      ],
+      "original_column_name": "date",
+      "column_name": "date",
+      "column_description": "the creation date of the account",
+      "data_format": "date",
+      "value_description": "in the form YYMMDD",
+      "id": "account.date"
+    },
+    {
+      "type": "table",
+      "name": "card",
+      "id": "card"
+    },
+    {
+      "type": "column",
+      "table": "card",
+      "name": "card_id",
+      "col_type": "INTEGER",
+      "is_pk": true,
+      "examples": [
+        "1",
+        "2"
+      ],
+      "original_column_name": "card_id",
+      "column_name": "credit card id",
+      "column_description": "id number of credit card",
+      "data_format": "integer",
+      "value_description": null,
+      "id": "card.card_id"
+    },
+    {
+      "type": "column",
+      "table": "card",
+      "name": "disp_id",
+      "col_type": "INTEGER",
+      "is_pk": false,
+      "examples": [
+        "9",
+        "19"
+      ],
+      "original_column_name": "disp_id",
+      "column_name": "disposition id",
+      "column_description": "disposition id",
+      "data_format": "integer",
+      "value_description": null,
+      "id": "card.disp_id"
+    },
+    {
+      "type": "column",
+      "table": "card",
+      "name": "type",
+      "col_type": "TEXT",
+      "is_pk": false,
+      "examples": [
+        "classic",
+        "junior"
+      ],
+      "original_column_name": "type",
+      "column_name": null,
+      "column_description": "type of credit card",
+      "data_format": "text",
+      "value_description": "\"junior\": junior class of credit card; \n\"classic\": standard class of credit card; \n\"gold\": high-level credit card",
+      "id": "card.type"
+    },
+    {
+      "type": "column",
+      "table": "card",
+      "name": "issued",
+      "col_type": "DATE",
+      "is_pk": false,
+      "examples": [
+        "1998-09-29",
+        "1998-02-26"
+      ],
+      "original_column_name": "issued",
+      "column_name": null,
+      "column_description": "the date when the credit card issued ",
+      "data_format": "date",
+      "value_description": "in the form YYMMDD",
+      "id": "card.issued"
+    },
+    {
+      "type": "table",
+      "name": "client",
+      "id": "client"
+    },
+    {
+      "type": "column",
+      "table": "client",
+      "name": "client_id",
+      "col_type": "INTEGER",
+      "is_pk": true,
+      "examples": [
+        "1",
+        "2"
+      ],
+      "original_column_name": "client_id",
+      "column_name": null,
+      "column_description": "the unique number",
+      "data_format": "integer",
+      "value_description": null,
+      "id": "client.client_id"
+    },
+    {
+      "type": "column",
+      "table": "client",
+      "name": "gender",
+      "col_type": "TEXT",
+      "is_pk": false,
+      "examples": [
+        "M",
+        "F"
+      ],
+      "original_column_name": "gender",
+      "column_name": null,
+      "column_description": null,
+      "data_format": "text",
+      "value_description": "F：female \nM：male ",
+      "id": "client.gender"
+    },
+    {
+      "type": "column",
+      "table": "client",
+      "name": "birth_date",
+      "col_type": "DATE",
+      "is_pk": false,
+      "examples": [
+        "1952-08-26",
+        "1971-02-28"
+      ],
+      "original_column_name": "birth_date",
+      "column_name": null,
+      "column_description": "birth date",
+      "data_format": "date",
+      "value_description": null,
+      "id": "client.birth_date"
+    },
+    {
+      "type": "column",
+      "table": "client",
+      "name": "district_id",
+      "col_type": "INTEGER",
+      "is_pk": false,
+      "examples": [
+        "1",
+        "74"
+      ],
+      "original_column_name": "district_id",
+      "column_name": "location of branch",
+      "column_description": "location of branch",
+      "data_format": "integer",
+      "value_description": null,
+      "id": "client.district_id"
+    },
+    {
+      "type": "table",
+      "name": "disp",
+      "id": "disp"
+    },
+    {
+      "type": "column",
+      "table": "disp",
+      "name": "disp_id",
+      "col_type": "INTEGER",
+      "is_pk": true,
+      "examples": [
+        "1",
+        "2"
+      ],
+      "original_column_name": "disp_id",
+      "column_name": "disposition id",
+      "column_description": "unique number of identifying this row of record",
+      "data_format": "integer",
+      "value_description": null,
+      "id": "disp.disp_id"
+    },
+    {
+      "type": "column",
+      "table": "disp",
+      "name": "client_id",
+      "col_type": "INTEGER",
+      "is_pk": false,
+      "examples": [
+        "1",
+        "2"
+      ],
+      "original_column_name": "client_id",
+      "column_name": null,
+      "column_description": "id number of client",
+      "data_format": "integer",
+      "value_description": null,
+      "id": "disp.client_id"
+    },
+    {
+      "type": "column",
+      "table": "disp",
+      "name": "account_id",
+      "col_type": "INTEGER",
+      "is_pk": false,
+      "examples": [
+        "2",
+        "3"
+      ],
+      "original_column_name": "account_id",
+      "column_name": null,
+      "column_description": "id number of account",
+      "data_format": "integer",
+      "value_description": null,
+      "id": "disp.account_id"
+    },
+    {
+      "type": "column",
+      "table": "disp",
+      "name": "type",
+      "col_type": "TEXT",
+      "is_pk": false,
+      "examples": [
+        "OWNER",
+        "DISPONENT"
+      ],
+      "original_column_name": "type",
+      "column_name": null,
+      "column_description": "type of disposition",
+      "data_format": "text",
+      "value_description": "\"OWNER\" : \"USER\" : \"DISPONENT\"\ncommonsense evidence:\nthe account can only have the right to issue permanent orders or apply for loans",
+      "id": "disp.type"
+    },
+    {
+      "type": "table",
+      "name": "district",
+      "id": "district"
+    },
+    {
+      "type": "column",
+      "table": "district",
+      "name": "district_id",
+      "col_type": "INTEGER",
+      "is_pk": true,
+      "examples": [
+        "1",
+        "2"
+      ],
+      "original_column_name": "district_id",
+      "column_name": "location of branch",
+      "column_description": "location of branch",
+      "data_format": "integer ",
+      "value_description": null,
+      "id": "district.district_id"
+    },
+    {
+      "type": "column",
+      "table": "district",
+      "name": "A2",
+      "col_type": "TEXT",
+      "is_pk": false,
+      "examples": [
+        "Hl.m. Praha",
+        "Benesov"
+      ],
+      "original_column_name": "A2",
+      "column_name": "district_name",
+      "column_description": "district_name",
+      "data_format": "text",
+      "value_description": null,
+      "id": "district.A2"
+    },
+    {
+      "type": "column",
+      "table": "district",
+      "name": "A3",
+      "col_type": "TEXT",
+      "is_pk": false,
+      "examples": [
+        "south Moravia",
+        "central Bohemia"
+      ],
+      "original_column_name": "A3",
+      "column_name": "region",
+      "column_description": "region",
+      "data_format": "text",
+      "value_description": null,
+      "id": "district.A3"
+    },
+    {
+      "type": "column",
+      "table": "district",
+      "name": "A4",
+      "col_type": "TEXT",
+      "is_pk": false,
+      "examples": [
+        "1204953",
+        "88884"
+      ],
+      "original_column_name": "A4",
+      "column_name": "number of inhabitants ",
+      "column_description": null,
+      "data_format": "text",
+      "value_description": null,
+      "id": "district.A4"
+    },
+    {
+      "type": "column",
+      "table": "district",
+      "name": "A5",
+      "col_type": "TEXT",
+      "is_pk": false,
+      "examples": [
+        "0",
+        "60"
+      ],
+      "original_column_name": "A5",
+      "column_name": "no. of municipalities with inhabitants < 499",
+      "column_description": "municipality < district < region",
+      "data_format": "text",
+      "value_description": null,
+      "id": "district.A5"
+    },
+    {
+      "type": "column",
+      "table": "district",
+      "name": "A6",
+      "col_type": "TEXT",
+      "is_pk": false,
+      "examples": [
+        "26",
+        "41"
+      ],
+      "original_column_name": "A6",
+      "column_name": "no. of municipalities with inhabitants 500-1999",
+      "column_description": "municipality < district < region",
+      "data_format": "text",
+      "value_description": null,
+      "id": "district.A6"
+    },
+    {
+      "type": "column",
+      "table": "district",
+      "name": "A7",
+      "col_type": "TEXT",
+      "is_pk": false,
+      "examples": [
+        "4",
+        "6"
+      ],
+      "original_column_name": "A7",
+      "column_name": "no. of municipalities with inhabitants 2000-9999",
+      "column_description": "municipality < district < region",
+      "data_format": "text",
+      "value_description": null,
+      "id": "district.A7"
+    },
+    {
+      "type": "column",
+      "table": "district",
+      "name": "A8",
+      "col_type": "INTEGER",
+      "is_pk": false,
+      "examples": [
+        "1",
+        "2"
+      ],
+      "original_column_name": "A8",
+      "column_name": "no. of municipalities with inhabitants > 10000",
+      "column_description": "municipality < district < region",
+      "data_format": "integer",
+      "value_description": null,
+      "id": "district.A8"
+    },
+    {
+      "type": "column",
+      "table": "district",
+      "name": "A9",
+      "col_type": "INTEGER",
+      "is_pk": false,
+      "examples": [
+        "6",
+        "4"
+      ],
+      "original_column_name": "A9",
+      "column_name": null,
+      "column_description": null,
+      "data_format": "integer",
+      "value_description": "not useful",
+      "id": "district.A9"
+    },
+    {
+      "type": "column",
+      "table": "district",
+      "name": "A10",
+      "col_type": "REAL",
+      "is_pk": false,
+      "examples": [
+        "100.0",
+        "46.7"
+      ],
+      "original_column_name": "A10",
+      "column_name": "ratio of urban inhabitants",
+      "column_description": "ratio of urban inhabitants",
+      "data_format": "real",
+      "value_description": null,
+      "id": "district.A10"
+    },
+    {
+      "type": "column",
+      "table": "district",
+      "name": "A11",
+      "col_type": "INTEGER",
+      "is_pk": false,
+      "examples": [
+        "8369",
+        "12541"
+      ],
+      "original_column_name": "A11",
+      "column_name": "average salary",
+      "column_description": "average salary",
+      "data_format": "integer",
+      "value_description": null,
+      "id": "district.A11"
+    },
+    {
+      "type": "column",
+      "table": "district",
+      "name": "A12",
+      "col_type": "REAL",
+      "is_pk": false,
+      "examples": [
+        "3.3",
+        "1.6"
+      ],
+      "original_column_name": "A12",
+      "column_name": "unemployment rate 1995",
+      "column_description": "unemployment rate 1995",
+      "data_format": "real",
+      "value_description": null,
+      "id": "district.A12"
+    },
+    {
+      "type": "column",
+      "table": "district",
+      "name": "A13",
+      "col_type": "REAL",
+      "is_pk": false,
+      "examples": [
+        "3.6",
+        "2.01"
+      ],
+      "original_column_name": "A13",
+      "column_name": "unemployment rate 1996",
+      "column_description": "unemployment rate 1996",
+      "data_format": "real",
+      "value_description": null,
+      "id": "district.A13"
+    },
+    {
+      "type": "column",
+      "table": "district",
+      "name": "A14",
+      "col_type": "INTEGER",
+      "is_pk": false,
+      "examples": [
+        "131",
+        "100"
+      ],
+      "original_column_name": "A14",
+      "column_name": "no. of entrepreneurs per 1000 inhabitants",
+      "column_description": "no. of entrepreneurs per 1000 inhabitants",
+      "data_format": "integer",
+      "value_description": null,
+      "id": "district.A14"
+    },
+    {
+      "type": "column",
+      "table": "district",
+      "name": "A15",
+      "col_type": "INTEGER",
+      "is_pk": false,
+      "examples": [
+        "2854",
+        "85677"
+      ],
+      "original_column_name": "A15",
+      "column_name": "no. of committed crimes 1995",
+      "column_description": "no. of committed crimes 1995",
+      "data_format": "integer",
+      "value_description": null,
+      "id": "district.A15"
+    },
+    {
+      "type": "column",
+      "table": "district",
+      "name": "A16",
+      "col_type": "INTEGER",
+      "is_pk": false,
+      "examples": [
+        "4505",
+        "99107"
+      ],
+      "original_column_name": "A16",
+      "column_name": "no. of committed crimes 1996",
+      "column_description": "no. of committed crimes 1996",
+      "data_format": "integer",
+      "value_description": null,
+      "id": "district.A16"
+    },
+    {
+      "type": "table",
+      "name": "loan",
+      "id": "loan"
+    },
+    {
+      "type": "column",
+      "table": "loan",
+      "name": "loan_id",
+      "col_type": "INTEGER",
+      "is_pk": true,
+      "examples": [
+        "4959",
+        "4961"
+      ],
+      "original_column_name": "loan_id",
+      "column_name": null,
+      "column_description": "the id number identifying the loan data",
+      "data_format": "integer",
+      "value_description": null,
+      "id": "loan.loan_id"
+    },
+    {
+      "type": "column",
+      "table": "loan",
+      "name": "account_id",
+      "col_type": "INTEGER",
+      "is_pk": false,
+      "examples": [
+        "2",
+        "19"
+      ],
+      "original_column_name": "account_id",
+      "column_name": null,
+      "column_description": "the id number identifying the account",
+      "data_format": "integer",
+      "value_description": null,
+      "id": "loan.account_id"
+    },
+    {
+      "type": "column",
+      "table": "loan",
+      "name": "date",
+      "col_type": "DATE",
+      "is_pk": false,
+      "examples": [
+        "1998-04-19",
+        "1998-07-12"
+      ],
+      "original_column_name": "date",
+      "column_name": null,
+      "column_description": "the date when the loan is approved",
+      "data_format": "date",
+      "value_description": null,
+      "id": "loan.date"
+    },
+    {
+      "type": "column",
+      "table": "loan",
+      "name": "amount",
+      "col_type": "INTEGER",
+      "is_pk": false,
+      "examples": [
+        "30276",
+        "86184"
+      ],
+      "original_column_name": "amount",
+      "column_name": null,
+      "column_description": "approved amount",
+      "data_format": "integer",
+      "value_description": "unit：US dollar",
+      "id": "loan.amount"
+    },
+    {
+      "type": "column",
+      "table": "loan",
+      "name": "duration",
+      "col_type": "INTEGER",
+      "is_pk": false,
+      "examples": [
+        "60",
+        "24"
+      ],
+      "original_column_name": "duration",
+      "column_name": null,
+      "column_description": "loan duration",
+      "data_format": "integer",
+      "value_description": "unit：month",
+      "id": "loan.duration"
+    },
+    {
+      "type": "column",
+      "table": "loan",
+      "name": "payments",
+      "col_type": "REAL",
+      "is_pk": false,
+      "examples": [
+        "2523.0",
+        "3151.0"
+      ],
+      "original_column_name": "payments",
+      "column_name": "monthly payments",
+      "column_description": "monthly payments",
+      "data_format": "real",
+      "value_description": "unit：month",
+      "id": "loan.payments"
+    },
+    {
+      "type": "column",
+      "table": "loan",
+      "name": "status",
+      "col_type": "TEXT",
+      "is_pk": false,
+      "examples": [
+        "C",
+        "A"
+      ],
+      "original_column_name": "status",
+      "column_name": null,
+      "column_description": "repayment status",
+      "data_format": "text",
+      "value_description": "'A' stands for contract finished, no problems;\n'B' stands for contract finished, loan not paid;\n'C' stands for running contract, OK so far;\n'D' stands for running contract, client in debt",
+      "id": "loan.status"
+    },
+    {
+      "type": "table",
+      "name": "order",
+      "id": "order"
+    },
+    {
+      "type": "column",
+      "table": "order",
+      "name": "order_id",
+      "col_type": "INTEGER",
+      "is_pk": true,
+      "examples": [
+        "29401",
+        "29402"
+      ],
+      "original_column_name": "order_id",
+      "column_name": null,
+      "column_description": "identifying the unique order",
+      "data_format": "integer",
+      "value_description": null,
+      "id": "order.order_id"
+    },
+    {
+      "type": "column",
+      "table": "order",
+      "name": "account_id",
+      "col_type": "INTEGER",
+      "is_pk": false,
+      "examples": [
+        "96",
+        "97"
+      ],
+      "original_column_name": "account_id",
+      "column_name": null,
+      "column_description": "id number of account",
+      "data_format": "integer",
+      "value_description": null,
+      "id": "order.account_id"
+    },
+    {
+      "type": "column",
+      "table": "order",
+      "name": "bank_to",
+      "col_type": "TEXT",
+      "is_pk": false,
+      "examples": [
+        "QR",
+        "YZ"
+      ],
+      "original_column_name": "bank_to",
+      "column_name": "bank of the recipient",
+      "column_description": "bank of the recipient",
+      "data_format": "text",
+      "value_description": null,
+      "id": "order.bank_to"
+    },
+    {
+      "type": "column",
+      "table": "order",
+      "name": "account_to",
+      "col_type": "INTEGER",
+      "is_pk": false,
+      "examples": [
+        "89597016",
+        "13943797"
+      ],
+      "original_column_name": "account_to",
+      "column_name": "account of the recipient",
+      "column_description": "account of the recipient",
+      "data_format": "integer",
+      "value_description": "each bank has unique two-letter code",
+      "id": "order.account_to"
+    },
+    {
+      "type": "column",
+      "table": "order",
+      "name": "amount",
+      "col_type": "REAL",
+      "is_pk": false,
+      "examples": [
+        "2.0",
+        "107.0"
+      ],
+      "original_column_name": "amount",
+      "column_name": "debited amount",
+      "column_description": "debited amount",
+      "data_format": "real",
+      "value_description": null,
+      "id": "order.amount"
+    },
+    {
+      "type": "column",
+      "table": "order",
+      "name": "k_symbol",
+      "col_type": "TEXT",
+      "is_pk": false,
+      "examples": [
+        "SIPO",
+        "UVER"
+      ],
+      "original_column_name": "k_symbol",
+      "column_name": "characterization of the payment",
+      "column_description": "purpose of the payment",
+      "data_format": "text",
+      "value_description": "\"POJISTNE\" stands for insurance payment\n\"SIPO\" stands for household payment\n\"LEASING\" stands for leasing\n\"UVER\" stands for loan payment",
+      "id": "order.k_symbol"
+    },
+    {
+      "type": "table",
+      "name": "trans",
+      "id": "trans"
+    },
+    {
+      "type": "column",
+      "table": "trans",
+      "name": "trans_id",
+      "col_type": "INTEGER",
+      "is_pk": true,
+      "examples": [
+        "1",
+        "5"
+      ],
+      "original_column_name": "trans_id",
+      "column_name": "transaction id",
+      "column_description": "transaction id",
+      "data_format": "integer",
+      "value_description": null,
+      "id": "trans.trans_id"
+    },
+    {
+      "type": "column",
+      "table": "trans",
+      "name": "account_id",
+      "col_type": "INTEGER",
+      "is_pk": false,
+      "examples": [
+        "47",
+        "2"
+      ],
+      "original_column_name": "account_id",
+      "column_name": null,
+      "column_description": null,
+      "data_format": "integer",
+      "value_description": null,
+      "id": "trans.account_id"
+    },
+    {
+      "type": "column",
+      "table": "trans",
+      "name": "date",
+      "col_type": "DATE",
+      "is_pk": false,
+      "examples": [
+        "1998-05-31",
+        "1998-06-30"
+      ],
+      "original_column_name": "date",
+      "column_name": "date of transaction",
+      "column_description": "date of transaction",
+      "data_format": "date",
+      "value_description": null,
+      "id": "trans.date"
+    },
+    {
+      "type": "column",
+      "table": "trans",
+      "name": "type",
+      "col_type": "TEXT",
+      "is_pk": false,
+      "examples": [
+        "VYDAJ",
+        "PRIJEM"
+      ],
+      "original_column_name": "type",
+      "column_name": "+/- transaction",
+      "column_description": "+/- transaction",
+      "data_format": "text",
+      "value_description": "\"PRIJEM\" stands for credit\n\"VYDAJ\" stands for withdrawal",
+      "id": "trans.type"
+    },
+    {
+      "type": "column",
+      "table": "trans",
+      "name": "operation",
+      "col_type": "TEXT",
+      "is_pk": false,
+      "examples": [
+        "VYBER",
+        "PREVOD NA UCET"
+      ],
+      "original_column_name": "operation",
+      "column_name": "mode of transaction",
+      "column_description": "mode of transaction",
+      "data_format": "text",
+      "value_description": "\"VYBER KARTOU\": credit card withdrawal\n\"VKLAD\": credit in cash\n\"PREVOD Z UCTU\" :collection from another bank\n\"VYBER\": withdrawal in cash\n\"PREVOD NA UCET\": remittance to another bank",
+      "id": "trans.operation"
+    },
+    {
+      "type": "column",
+      "table": "trans",
+      "name": "amount",
+      "col_type": "INTEGER",
+      "is_pk": false,
+      "examples": [
+        "15",
+        "30"
+      ],
+      "original_column_name": "amount",
+      "column_name": "amount of money",
+      "column_description": "amount of money",
+      "data_format": "integer",
+      "value_description": "Unit：USD",
+      "id": "trans.amount"
+    },
+    {
+      "type": "column",
+      "table": "trans",
+      "name": "balance",
+      "col_type": "INTEGER",
+      "is_pk": false,
+      "examples": [
+        "1100",
+        "800"
+      ],
+      "original_column_name": "balance",
+      "column_name": "balance after transaction",
+      "column_description": "balance after transaction",
+      "data_format": "integer",
+      "value_description": "Unit：USD",
+      "id": "trans.balance"
+    },
+    {
+      "type": "column",
+      "table": "trans",
+      "name": "k_symbol",
+      "col_type": "TEXT",
+      "is_pk": false,
+      "examples": [
+        "SLUZBY",
+        "SIPO"
+      ],
+      "original_column_name": "k_symbol",
+      "column_name": "characterization of the transaction",
+      "column_description": null,
+      "data_format": "text",
+      "value_description": "\"POJISTNE\": stands for insurrance payment\n\"SLUZBY\": stands for payment for statement\n\"UROK\": stands for interest credited\n\"SANKC. UROK\": sanction interest if negative balance\n\"SIPO\": stands for household\n\"DUCHOD\": stands for old-age pension\n\"UVER\": stands for loan payment",
+      "id": "trans.k_symbol"
+    },
+    {
+      "type": "column",
+      "table": "trans",
+      "name": "bank",
+      "col_type": "TEXT",
+      "is_pk": false,
+      "examples": [
+        "ST",
+        "KL"
+      ],
+      "original_column_name": "bank",
+      "column_name": "bank of the partner",
+      "column_description": null,
+      "data_format": "text",
+      "value_description": "each bank has unique two-letter code",
+      "id": "trans.bank"
+    },
+    {
+      "type": "column",
+      "table": "trans",
+      "name": "account",
+      "col_type": "INTEGER",
+      "is_pk": false,
+      "examples": [
+        "0",
+        "66487163"
+      ],
+      "original_column_name": "account",
+      "column_name": "account of the partner",
+      "column_description": null,
+      "data_format": "integer",
+      "value_description": null,
+      "id": "trans.account"
+    }
+  ],
+  "links": [
+    {
+      "type": "structure",
+      "source": "account",
+      "target": "account.account_id"
+    },
+    {
+      "type": "structure",
+      "source": "account",
+      "target": "account.district_id"
+    },
+    {
+      "type": "structure",
+      "source": "account",
+      "target": "account.frequency"
+    },
+    {
+      "type": "structure",
+      "source": "account",
+      "target": "account.date"
+    },
+    {
+      "type": "foreign_key",
+      "source": "account.account_id",
+      "target": "disp.account_id"
+    },
+    {
+      "type": "foreign_key",
+      "source": "account.account_id",
+      "target": "loan.account_id"
+    },
+    {
+      "type": "foreign_key",
+      "source": "account.account_id",
+      "target": "order.account_id"
+    },
+    {
+      "type": "foreign_key",
+      "source": "account.account_id",
+      "target": "trans.account_id"
+    },
+    {
+      "type": "foreign_key",
+      "source": "account.district_id",
+      "target": "district.district_id"
+    },
+    {
+      "type": "similarity",
+      "weight": 1.0,
+      "source": "account.district_id",
+      "target": "client.district_id"
+    },
+    {
+      "type": "similarity",
+      "weight": 1.0,
+      "source": "account.date",
+      "target": "loan.date"
+    },
+    {
+      "type": "similarity",
+      "weight": 1.0,
+      "source": "account.date",
+      "target": "trans.date"
+    },
+    {
+      "type": "structure",
+      "source": "card",
+      "target": "card.card_id"
+    },
+    {
+      "type": "structure",
+      "source": "card",
+      "target": "card.disp_id"
+    },
+    {
+      "type": "structure",
+      "source": "card",
+      "target": "card.type"
+    },
+    {
+      "type": "structure",
+      "source": "card",
+      "target": "card.issued"
+    },
+    {
+      "type": "foreign_key",
+      "source": "card.disp_id",
+      "target": "disp.disp_id"
+    },
+    {
+      "type": "similarity",
+      "weight": 1.0,
+      "source": "card.type",
+      "target": "disp.type"
+    },
+    {
+      "type": "similarity",
+      "weight": 1.0,
+      "source": "card.type",
+      "target": "trans.type"
+    },
+    {
+      "type": "structure",
+      "source": "client",
+      "target": "client.client_id"
+    },
+    {
+      "type": "structure",
+      "source": "client",
+      "target": "client.gender"
+    },
+    {
+      "type": "structure",
+      "source": "client",
+      "target": "client.birth_date"
+    },
+    {
+      "type": "structure",
+      "source": "client",
+      "target": "client.district_id"
+    },
+    {
+      "type": "foreign_key",
+      "source": "client.client_id",
+      "target": "disp.client_id"
+    },
+    {
+      "type": "foreign_key",
+      "source": "client.district_id",
+      "target": "district.district_id"
+    },
+    {
+      "type": "structure",
+      "source": "disp",
+      "target": "disp.disp_id"
+    },
+    {
+      "type": "structure",
+      "source": "disp",
+      "target": "disp.client_id"
+    },
+    {
+      "type": "structure",
+      "source": "disp",
+      "target": "disp.account_id"
+    },
+    {
+      "type": "structure",
+      "source": "disp",
+      "target": "disp.type"
+    },
+    {
+      "type": "similarity",
+      "weight": 1.0,
+      "source": "disp.account_id",
+      "target": "loan.account_id"
+    },
+    {
+      "type": "similarity",
+      "weight": 1.0,
+      "source": "disp.account_id",
+      "target": "order.account_id"
+    },
+    {
+      "type": "similarity",
+      "weight": 1.0,
+      "source": "disp.account_id",
+      "target": "trans.account_id"
+    },
+    {
+      "type": "similarity",
+      "weight": 1.0,
+      "source": "disp.type",
+      "target": "trans.type"
+    },
+    {
+      "type": "structure",
+      "source": "district",
+      "target": "district.district_id"
+    },
+    {
+      "type": "structure",
+      "source": "district",
+      "target": "district.A2"
+    },
+    {
+      "type": "structure",
+      "source": "district",
+      "target": "district.A3"
+    },
+    {
+      "type": "structure",
+      "source": "district",
+      "target": "district.A4"
+    },
+    {
+      "type": "structure",
+      "source": "district",
+      "target": "district.A5"
+    },
+    {
+      "type": "structure",
+      "source": "district",
+      "target": "district.A6"
+    },
+    {
+      "type": "structure",
+      "source": "district",
+      "target": "district.A7"
+    },
+    {
+      "type": "structure",
+      "source": "district",
+      "target": "district.A8"
+    },
+    {
+      "type": "structure",
+      "source": "district",
+      "target": "district.A9"
+    },
+    {
+      "type": "structure",
+      "source": "district",
+      "target": "district.A10"
+    },
+    {
+      "type": "structure",
+      "source": "district",
+      "target": "district.A11"
+    },
+    {
+      "type": "structure",
+      "source": "district",
+      "target": "district.A12"
+    },
+    {
+      "type": "structure",
+      "source": "district",
+      "target": "district.A13"
+    },
+    {
+      "type": "structure",
+      "source": "district",
+      "target": "district.A14"
+    },
+    {
+      "type": "structure",
+      "source": "district",
+      "target": "district.A15"
+    },
+    {
+      "type": "structure",
+      "source": "district",
+      "target": "district.A16"
+    },
+    {
+      "type": "structure",
+      "source": "loan",
+      "target": "loan.loan_id"
+    },
+    {
+      "type": "structure",
+      "source": "loan",
+      "target": "loan.account_id"
+    },
+    {
+      "type": "structure",
+      "source": "loan",
+      "target": "loan.date"
+    },
+    {
+      "type": "structure",
+      "source": "loan",
+      "target": "loan.amount"
+    },
+    {
+      "type": "structure",
+      "source": "loan",
+      "target": "loan.duration"
+    },
+    {
+      "type": "structure",
+      "source": "loan",
+      "target": "loan.payments"
+    },
+    {
+      "type": "structure",
+      "source": "loan",
+      "target": "loan.status"
+    },
+    {
+      "type": "similarity",
+      "weight": 1.0,
+      "source": "loan.account_id",
+      "target": "order.account_id"
+    },
+    {
+      "type": "similarity",
+      "weight": 1.0,
+      "source": "loan.account_id",
+      "target": "trans.account_id"
+    },
+    {
+      "type": "similarity",
+      "weight": 1.0,
+      "source": "loan.date",
+      "target": "trans.date"
+    },
+    {
+      "type": "similarity",
+      "weight": 1.0,
+      "source": "loan.amount",
+      "target": "order.amount"
+    },
+    {
+      "type": "similarity",
+      "weight": 1.0,
+      "source": "loan.amount",
+      "target": "trans.amount"
+    },
+    {
+      "type": "structure",
+      "source": "order",
+      "target": "order.order_id"
+    },
+    {
+      "type": "structure",
+      "source": "order",
+      "target": "order.account_id"
+    },
+    {
+      "type": "structure",
+      "source": "order",
+      "target": "order.bank_to"
+    },
+    {
+      "type": "structure",
+      "source": "order",
+      "target": "order.account_to"
+    },
+    {
+      "type": "structure",
+      "source": "order",
+      "target": "order.amount"
+    },
+    {
+      "type": "structure",
+      "source": "order",
+      "target": "order.k_symbol"
+    },
+    {
+      "type": "similarity",
+      "weight": 1.0,
+      "source": "order.account_id",
+      "target": "trans.account_id"
+    },
+    {
+      "type": "similarity",
+      "weight": 1.0,
+      "source": "order.amount",
+      "target": "trans.amount"
+    },
+    {
+      "type": "similarity",
+      "weight": 1.0,
+      "source": "order.k_symbol",
+      "target": "trans.k_symbol"
+    },
+    {
+      "type": "structure",
+      "source": "trans",
+      "target": "trans.trans_id"
+    },
+    {
+      "type": "structure",
+      "source": "trans",
+      "target": "trans.account_id"
+    },
+    {
+      "type": "structure",
+      "source": "trans",
+      "target": "trans.date"
+    },
+    {
+      "type": "structure",
+      "source": "trans",
+      "target": "trans.type"
+    },
+    {
+      "type": "structure",
+      "source": "trans",
+      "target": "trans.operation"
+    },
+    {
+      "type": "structure",
+      "source": "trans",
+      "target": "trans.amount"
+    },
+    {
+      "type": "structure",
+      "source": "trans",
+      "target": "trans.balance"
+    },
+    {
+      "type": "structure",
+      "source": "trans",
+      "target": "trans.k_symbol"
+    },
+    {
+      "type": "structure",
+      "source": "trans",
+      "target": "trans.bank"
+    },
+    {
+      "type": "structure",
+      "source": "trans",
+      "target": "trans.account"
+    }
+  ]
+}

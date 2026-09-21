@@ -1,0 +1,14 @@
+__pycache__/
+venv/
+test/
+.DS_Store
+.env
+.env.*
+!.env.example
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.log
+*.tmp
+*.temp

@@ -1,0 +1,82 @@
+[
+  {
+    "question_id": 0,
+    "db_id": "db_example",
+    "question": "How many accounts who choose issuance after transaction are staying in East Bohemia region?",
+    "evidence": "A3 contains the data of region; 'POPLATEK PO OBRATU' represents for 'issuance after transaction'.",
+    "SQL": "SELECT COUNT(T2.account_id) FROM district AS T1 INNER JOIN account AS T2 ON T1.district_id = T2.district_id WHERE T1.A3 = 'east Bohemia' AND T2.frequency = 'POPLATEK PO OBRATU'",
+    "difficulty": "moderate"
+  },
+  {
+    "question_id": 1,
+    "db_id": "db_example",
+    "question": "How many accounts who have region in Prague are eligible for loans?",
+    "evidence": "A3 contains the data of region",
+    "SQL": "SELECT COUNT(T1.account_id) FROM account AS T1 INNER JOIN loan AS T2 ON T1.account_id = T2.account_id INNER JOIN district AS T3 ON T1.district_id = T3.district_id WHERE T3.A3 = 'Prague'",
+    "difficulty": "simple"
+  },
+  {
+    "question_id": 2,
+    "db_id": "db_example",
+    "question": "The average unemployment ratio of 1995 and 1996, which one has higher percentage?",
+    "evidence": "A12 refers to unemploymant rate 1995; A13 refers to unemploymant rate 1996",
+    "SQL": "SELECT DISTINCT IIF(AVG(A13) > AVG(A12), '1996', '1995') FROM district",
+    "difficulty": "simple"
+  },
+  {
+    "question_id": 3,
+    "db_id": "db_example",
+    "question": "List out the no. of districts that have female average salary is more than 6000 but less than 10000?",
+    "evidence": "A11 refers to average salary; Female mapps to gender = 'F'",
+    "SQL": "SELECT COUNT(DISTINCT T2.district_id)  FROM client AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id WHERE T1.gender = 'F' AND T2.A11 BETWEEN 6000 AND 10000",
+    "difficulty": "simple"
+  },
+  {
+    "question_id": 4,
+    "db_id": "db_example",
+    "question": "How many male customers who are living in North Bohemia have average salary greater than 8000?",
+    "evidence": "Male means that gender = 'M'; A3 refers to region; A11 pertains to average salary.",
+    "SQL": "SELECT COUNT(T1.client_id) FROM client AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id WHERE T1.gender = 'M' AND T2.A3 = 'north Bohemia' AND T2.A11 > 8000",
+    "difficulty": "moderate"
+  },
+  {
+    "question_id": 5,
+    "db_id": "db_example",
+    "question": "List out the account numbers of female clients who are oldest and has lowest average salary, calculate the gap between this lowest average salary with the highest average salary?",
+    "evidence": "Female means gender = 'F'; A11 refers to average salary; Gap = highest average salary - lowest average salary; If the person A's birthdate > B's birthdate, it means that person B is order than person A.",
+    "SQL": "SELECT T1.account_id , ( SELECT MAX(A11) - MIN(A11) FROM district ) FROM account AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id INNER JOIN disp AS T3 ON T1.account_id = T3.account_id INNER JOIN client AS T4 ON T3.client_id = T4.client_id WHERE T2.district_id = ( SELECT district_id FROM client WHERE gender = 'F' ORDER BY birth_date ASC LIMIT 1 ) ORDER BY T2.A11 DESC LIMIT 1",
+    "difficulty": "challenging"
+  },
+  {
+    "question_id": 6,
+    "db_id": "db_example",
+    "question": "List out the account numbers of clients who are youngest and have highest average salary?",
+    "evidence": "If the person A's birthdate < B's birthdate, it means that person B is younger than person A; A11 refers to average salary",
+    "SQL": "SELECT T1.account_id  FROM account AS T1 INNER JOIN disp AS T2 ON T1.account_id = T2.account_id INNER JOIN client AS T3 ON T2.client_id = T3.client_id INNER JOIN district AS T4 on T4.district_id = T1.district_id WHERE T2.client_id = ( SELECT client_id FROM client ORDER BY birth_date DESC LIMIT 1) GROUP BY T4.A11, T1.account_id",
+    "difficulty": "moderate"
+  },
+  {
+    "question_id": 7,
+    "db_id": "db_example",
+    "question": "How many customers who choose statement of weekly issuance are Owner?",
+    "evidence": "'POPLATEK TYDNE' stands for weekly issuance",
+    "SQL": "SELECT COUNT(T1.account_id) FROM account AS T1 INNER JOIN disp AS T2 ON T1.account_id = T2.account_id WHERE T2.type = 'OWNER' AND T1.frequency = 'POPLATEK TYDNE'",
+    "difficulty": "simple"
+  },
+  {
+    "question_id": 8,
+    "db_id": "db_example",
+    "question": "List out the id number of client who choose statement of issuance after transaction are Disponent?",
+    "evidence": "'POPLATEK PO OBRATU' stands for issuance after transaction",
+    "SQL": "SELECT T2.client_id FROM account AS T1 INNER JOIN disp AS T2 ON T1.account_id = T2.account_id WHERE T1.frequency = 'POPLATEK PO OBRATU' AND T2.type = 'DISPONENT'",
+    "difficulty": "simple"
+  },
+  {
+    "question_id": 9,
+    "db_id": "db_example",
+    "question": "Among the accounts who have approved loan date in 1997, list out the accounts that have the lowest approved amount and choose weekly issuance statement.",
+    "evidence": "'POPLATEK TYDNE' stands for weekly issuance",
+    "SQL": "SELECT T2.account_id FROM loan AS T1 INNER JOIN account AS T2 ON T1.account_id = T2.account_id WHERE STRFTIME('%Y', T1.date) = '1997' AND T2.frequency = 'POPLATEK TYDNE' ORDER BY T1.amount LIMIT 1",
+    "difficulty": "moderate"
+  }
+]
